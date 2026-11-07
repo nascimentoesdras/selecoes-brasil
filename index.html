@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seleções Brasil | Encontre sua próxima oportunidade</title>
+    <meta name="description" content="Encontre oportunidades profissionais e conecte-se com empresas que estão construindo o futuro.">
+    <meta name="theme-color" content="#5546F5">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Seleções Brasil | Encontre sua próxima oportunidade">
+    <meta property="og:description" content="Portal de vagas e carreiras da Seleções Brasil.">
+    <link rel="icon" href="assets/images/logo/pwa-icon-192.svg">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" id="top">
+    <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Eleições Brasil, início"><span class="brand-mark">EB</span><span>Seleções <b>Brasil</b></span></a>
+        <nav class="desktop-nav" id="desktop-nav" aria-label="Navegação principal"></nav>
+        <div class="header-actions"><a class="login-link" href="#entrar">Entrar</a><a class="btn btn-primary btn-small" href="#cadastro">Cadastrar-se</a><button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><i class="bi bi-list"></i></button></div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel"></nav>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-glow"></div><div class="container hero-content">
+            <div class="hero-copy"><span class="eyebrow"><i class="bi bi-stars"></i> Seu próximo passo começa aqui</span>
+                <h1>Encontre a oportunidade <em>perfeita</em> para sua carreira.</h1>
+                <p>Descubra oportunidades profissionais, conecte-se com empresas e encontre o emprego ideal para você.</p>
+            </div>
+            <form class="search-bar" id="search-form">
+                <label class="search-field"><i class="bi bi-search"></i><span><small>O que você procura?</small><input id="keyword" type="search" placeholder="Cargo, habilidade ou palavra-chave"></span></label>
+                <label class="search-field"><i class="bi bi-geo-alt"></i><span><small>Onde?</small><input id="location" type="search" placeholder="Cidade ou estado"></span></label>
+                <button class="btn btn-primary search-button" type="submit"><i class="bi bi-search"></i> Buscar vagas</button>
+            </form>
+            <div class="popular"><span>Pesquisas populares:</span><button data-search="Desenvolvedor">Desenvolvedor Web</button><button data-search="Designer">Designer</button><button data-search="Analista">Analista de Sistemas</button><button data-search="Marketing">Marketing</button><button data-search="Atendimento">Atendimento</button></div>
+        </div>
+    </section>
+
+    <section class="section jobs-section" id="vagas"><div class="container">
+        <div class="section-heading"><div><span class="eyebrow">Explore oportunidades</span><h2>Vagas recomendadas</h2><p>Encontre a oportunidade que combina com seus objetivos.</p></div><div class="view-toggle"><button class="active" data-sort="recent">Últimas vagas</button><button data-sort="featured">Em destaque</button></div></div>
+        <div class="jobs-layout"><aside class="categories-panel"><h3>Categorias</h3><div id="categories"></div><button class="all-categories" id="all-categories">Ver todas as categorias <i class="bi bi-arrow-right"></i></button></aside>
+            <div class="jobs-results"><div class="results-toolbar"><strong id="result-count">6 vagas encontradas</strong><select id="mode-filter" aria-label="Filtrar por modalidade"><option value="">Todas as modalidades</option><option>Remoto</option><option>Híbrido</option><option>Presencial</option></select><select id="contract-filter" aria-label="Filtrar por contratação"><option value="">Todos os contratos</option><option>CLT</option><option>PJ</option><option>Estágio</option><option>Freelancer</option></select></div><div class="jobs-list" id="jobs-list"></div><button class="load-more" id="load-more">Carregar mais vagas <i class="bi bi-arrow-down"></i></button></div>
+        </div>
+    </div></section>
+
+    <section class="section companies-section" id="empresas"><div class="container"><div class="section-heading centered"><div><span class="eyebrow">Onde você pode chegar</span><h2>Principais empresas cadastradas</h2><p>Conheça empresas e descubra novas oportunidades profissionais.</p></div><a class="text-link" href="#empresas">Ver todas <i class="bi bi-arrow-right"></i></a></div><div class="companies-grid" id="companies"></div></div></section>
+    <section class="section featured-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">Não perca</span><h2>Vagas em destaque</h2><p>Oportunidades selecionadas para dar um novo impulso à sua carreira.</p></div><a class="text-link" href="#vagas">Ver todas as vagas <i class="bi bi-arrow-right"></i></a></div><div class="featured-grid" id="featured-jobs"></div></div></section>
+    <section class="recruiter-section" id="recrutadores"><div class="container recruiter-card"><div class="recruiter-copy"><span class="eyebrow light">Para empresas e recrutadores</span><h2>Encontre os profissionais certos para sua empresa.</h2><p>Publique oportunidades, encontre talentos e simplifique seu processo de recrutamento.</p><a class="btn btn-white" href="#anunciar">Anunciar uma vaga <i class="bi bi-arrow-up-right"></i></a></div><div class="dashboard-art"><div class="dash-top"><span></span><span></span><span></span></div><div class="dash-line wide"></div><div class="dash-line"></div><div class="dash-chart"><i></i><i></i><i></i><i></i><i></i></div><div class="dash-card"></div></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">EB</span><span>Eleições <b>Brasil</b></span></a><p>Conectando talentos ao futuro do Brasil.</p><div class="socials"><a href="https://www.linkedin.com" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="https://www.instagram.com" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.facebook.com" aria-label="Facebook"><i class="bi bi-facebook"></i></a></div></div><div><h4>Para candidatos</h4><a href="#vagas">Encontrar vagas</a><a href="#curriculos">Criar currículo</a><a href="#empresas">Explorar empresas</a><a href="#blog">Dicas de carreira</a></div><div><h4>Para empresas</h4><a href="#anunciar">Anunciar uma vaga</a><a href="#recrutadores">Encontrar talentos</a><a href="#empresas">Soluções empresariais</a></div><div><h4>Ajuda</h4><a href="#central">Central de ajuda</a><a href="#privacidade">Privacidade</a><a href="#termos">Termos de uso</a></div></div><div class="container footer-bottom"><span>© 2026 Eleições Brasil. Todos os direitos reservados.</span><span>Feito para conectar possibilidades.</span></div></footer>
+
+<div class="modal-backdrop" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Fechar"><i class="bi bi-x-lg"></i></button><div id="modal-content"></div></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="js/main.js?v=20261106"></script>
+</body>
+</html>
